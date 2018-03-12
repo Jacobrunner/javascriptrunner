@@ -5,18 +5,25 @@
 //man running up left side of page?
 
 
-//obutton click
 $(document).ready(function(){
+    
+//obutton click
   $('#oBtn').click(function() {
      $('#oBtn').removeClass('open')
      $('#oBtn').removeClass('close')
-    
+     
     if (!$("#oBtn").hasClass("open")) {
       $('#oBtn').addClass('open'); 
-        if( $("#pBtn").hasClass("open") ){
+        
+      if ( $("#pBtn").hasClass("open") ){
           $('#pBtn').removeClass('open');  
           $('#pBtn').addClass('close');
         }
+       
+      if ( $("#cBtn").hasClass("open")) {
+          $("#cBtn").removeClass("open");
+          $("#cBtn").addClass("close");
+      }
   }
    else if($("#Btn").hasClass("open"))  {
               $('#oBtn').removeClass('open');  
@@ -26,14 +33,21 @@ $(document).ready(function(){
   
   //pbutton click
   $('#pBtn').click(function() {
+    
      $('#pBtn').removeClass('open');
      $('#pBtn').removeClass('close');
-    
+     
     if (!$("#pBtn").hasClass("open")) {
       $('#pBtn').addClass('open'); 
+      
         if( $("#oBtn").hasClass("open") ){
           $('#oBtn').removeClass('open');  
           $('#oBtn').addClass('close');
+        }
+      
+        if ( $("#cBtn").hasClass("open")) {
+          $("#cBtn").removeClass("open");
+          $("#cBtn").addClass("close");
         }
   }
    else if ($("#pBtn").hasClass("open")) {
@@ -41,6 +55,22 @@ $(document).ready(function(){
               $('#pBtn').addClass('close');}    
                    });
   
-  
-  
-});
+  //cbtn click
+     $("#cBtn").click(function() {
+       $("#cBtn").removeClass("open");
+       $("#cBtn").removeClass("close");
+       
+       if (!$("#cBtn").hasClass("open")) {
+         $("#cBtn").addClass("open");
+            if ( $("#pBtn").hasClass("open") ) {
+                $("#pBtn").removeClass("open");
+                $("#pBtn").addClass("close");
+            }
+         
+            if ( $("#oBtn").hasClass("open") ) {
+                $("#oBtn").removeClass("open");
+                $("#oBtn").addClass("close");
+            }
+       }
+       
+     });
