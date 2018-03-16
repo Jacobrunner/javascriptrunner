@@ -26,6 +26,14 @@ body{
   border-color:red;
 }
 
+.tD{
+  background-color:orange;
+  text-align:center-right;
+  border-radius:5%;
+  border-color:orange;
+  transform:scale(0);
+}
+
 @keyframes shrink{
   from{transform:scale(1);}
   to {transform:scale(0);}
@@ -34,6 +42,37 @@ body{
 @keyframes grow{
   from {transform:scale(0);}
   to {transform:scale(1);}
+}
+@keyframes cgrow{
+  0% {display:block;}
+  01% {transform:scale(0); opacity:0;}
+  100% {transform:scale(1);  opacity:1;}
+}
+@keyframes cshrink{
+  0% {z-index:1;}
+  01% {transform:scale(1); display:block; opacity:1;}
+  80% {transform:scale(0);}
+  100% {display:none; opacity:0; }
+  
+}
+.oBlank{
+  opacity:0;
+}
+.blank{
+  display:none; 
+  opacity:0;
+}
+.cClose{
+ 
+  animation-name:cshrink;
+  animation-duration:1s;
+  animation-fill-mode:forwards;
+}
+.cOpen{
+  animation-name:cgrow;
+  animation-duration:1s;
+  animation-fill-mode: forwards;
+
 }
 .open{
   animation-name:shrink;
@@ -47,9 +86,17 @@ body{
   animatin-fill-mode: forwards;
 }
 .overview{
+  
+  background-color:blue;
+  height:100%;
+  width:100%;
+}
+.portfolio{
+  
   background-color:white;
   width:100%;
   height:100%;
+  
 }
 
 /*.moon{
