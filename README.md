@@ -1,2 +1,2 @@
 # javascriptrunner
-a small personal site for myself.
+A small personal site for myself.
