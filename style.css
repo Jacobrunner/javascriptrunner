@@ -88,8 +88,8 @@ body{
 .overview{
   position:absolute;
   display:grid;
-  grid-template-columns: 50% 50%;
-  background-color:blue;
+  grid-template-columns: 55% 40% 5%;
+  background-color:orange;
   border-radius:5px;
   height:50%;
   width:50%;
@@ -97,14 +97,29 @@ body{
 .overtxt{
   border-radius:25%;
   text-align:center;
-  vertical-align: middle;
+  vertical-align:middle;
+  line-height:1.5;
+  bottom:50%;
+  transform: translate(0%, 10%);
+}
+#pic{
+  width:90%;
+  height:90%;
+  border-radius:50%;
+}
+.overpic{
+  
+  
 }
 .portfolio{
   position:absolute;
   background-color:white;
-  width:50%;
-  height:50%;
+  width:55%;
+  height:55%;
   
+}
+h2{
+  text-align:center;
 }
 .contact{
   position:absolute;
